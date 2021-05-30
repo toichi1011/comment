@@ -1,0 +1,32 @@
+body        {font-family: 'MS 明朝',
+    'Hiragino Kaku Gothic Pro',
+    sans-serif;
+    background-color: #ffffffaf}
+
+h1          {font-size: 38px;
+    margin-top: 0}
+
+p           {line-height: 1.5}
+
+/*ヘッダー*/
+header      {background-color: #4ddfdf}
+
+/*記事*/
+article     {background-color: #ffffffaf;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 1px #aaaaaa;
+    padding: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    -webkit-box-shadow: 5px 5px 3px #aaaaaa;
+    box-shadow: 5px 5px 3px #aaaaaa;
+    border-radius: 20px}
+
+/*フッター*/
+footer      {width: 900px;
+    margin-left: auto;
+    margin-right: auto}
