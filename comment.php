@@ -21,7 +21,7 @@
   $process[]=&$process[$key][stripslashes($k)];}
   else $process[$key][stripslashes($k)]=stripslashes($v);}}
   unset($process);}
-  if(file_exists("hpcomment.msg"))$comment=file_get_contents("hpcomment.msg");
+  if(file_exists("livecomment.msg"))$comment=file_get_contents("livecomment.msg");
   $_POST['comment']=str_replace('　','  ',$_POST['comment']);
   if(!preg_match("/[\e\200-\377]/",$_POST['comment'])||mb_strlen($_POST['comment'])>$lmt)$_POST['comment']="";
   if($_POST['comment']){$_POST['comment']=preg_replace("/(\x20|<br>)+$/i","",$_POST['comment']);
@@ -29,7 +29,7 @@
   $m2=array('&amp;','&quot;','&#x0023;','&#x0024;','&#x0025;','&#x0027;','&#x0060;','&lt;','&gt;','&#x003D;','&#x003F;','&#x002F;');
   $_POST['comment']=str_replace($m1,$m2,$_POST['comment']);
   $comment=$pdate.$_POST['comment']."\n".$comment;
-  file_put_contents("hpcomment.msg",$comment);
+  file_put_contents("livecomment.msg",$comment);
   $btn="parent.document.getElementById('submit').disabled=true;";}
   $comment=str_replace("\r","",rtrim($comment));
   $comment=str_replace("\n","$kugiri",rtrim($comment));
